@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("imajes/pexels-madison-inouye-1405773.jpg");
+    background-size: cover;
+
+}
+
+.weather-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid black;
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border-radius: 5px;
+}
+.weather-box{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 1rem;
+    backdrop-filter: blur(20px);
+    background-color: rgba(7, 145, 16, 0.229);
+}
+.weather{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    gap: 10rem;
+}
+.weather span{
+    background-color: rgba(7, 145, 16, 0.229);
+   padding: 4px;
+   border-radius: 4px;
+   font-size: 12px;
+}
