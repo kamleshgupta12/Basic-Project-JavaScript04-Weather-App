@@ -10,44 +10,73 @@
 
 <body>
     <div class="container">
-        <div class="weather-card">
-            <div class="heading">
-                <h2>Weather App</h2>
+        <div class="heading">
+            <h2>Weather App</h2>
+        </div>
+        <div class="tab">
+            <p class="weather-tab">Your Weather</p>
+            <p class="search-tab">Search Weather</p>
+        </div>
+        <div class="weather-container">
+
+
+            <!-- allow location container   -->
+            <div class="allow-location">
+                <img src="images/location.png" width="50px">
+                <p>Location Access</p>
+                <p>Allow Access to get weather Information</p>
+                <button class="allow-btn">Enable Access</button>
             </div>
-            <div class="weather">
-                <span>Your Weather</span>
-                <span>Search Weather</span>
+
+            <!-- search location container  -->
+
+            <form class="search-weather">
+                <input type="text" name="" id="" placeholder="Search for City...">
+                <button class="search-btn"><img src="images/search.png" width="15px"></button>
+            </form>
+
+
+            <!-- <<<<<<<<<<<<<<<<<<<<<loading container>>>>>>>>>>>>>>>>>>>>  -->
+
+            <div class="loading-containr">
+                <img src="images/loading.gif" loading="lazy" width="140px">
+                <p>Loading</p>
             </div>
-            <div class="weather-info">
-                <div class="flag">
-                    <p>palam</p>
-                    <img src="" alt="">
+            <!-- <<<<<<<<<<<<<<<<<<<<<show weather container>>>>>>>>>>>>>>>>>> -->
+
+            <div class="weather-card">
+                <div class="weather-info">
+                    <div class="flag">
+                        <p id="city">palam</p>
+                        <img id="icon" src="images/flag.png" width="50px">
+                    </div>
+                    <p id="dess">Haze</p>
+                    <img id="weather-icon" src="images/mist.png" width="50px">
+                    <h4 id="temp">23.33 C</h4>
                 </div>
-                <p>Haze</p>
-                <img src="" alt="">
-                <h4>23.33 C</h4>
-            </div>
-            <div class="weather-box">
-                <div class="box">
-                  <img src="" alt="">
-                  <p>WINDSPEED</p>
-                  <p>1.55m/s</p>
-                </div>
-                <div class="box">
-                    <img src="" alt="">
-                    <p>HUMIDITY</p>
-                    <p>40%</p>
-                </div>
-                <div class="box">
-                    <img src="" alt="">
-                    <p>CLOUDS</p>
-                    <p>5%</p>
+                <div class="weather-box">
+                    <div class="box">
+                        <img src="images/wind-turbine.png" width="50px">
+                        <p>WINDSPEED</p>
+                        <p id="windSpeed">1.55m/s</p>
+                    </div>
+                    <div class="box">
+                        <img src="images/humidity.png" width="50px">
+                        <p>HUMIDITY</p>
+                        <p id="humidity">40%</p>
+                    </div>
+                    <div class="box">
+                        <img src="images/clouds.png" width="50px">
+                        <p>CLOUDS</p>
+                        <p id="clouds">5%</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
 </body>
 
 </html>

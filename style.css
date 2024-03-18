@@ -1,4 +1,27 @@
-* {
+.weather-tab.current-tab{
+    background-color: red;
+     cursor: pointer;
+}
+.search-tab.current-tab{
+    background-color: red;
+    cursor: pointer;
+}
+.display{
+    scale: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,6 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-image: url("imajes/pexels-madison-inouye-1405773.jpg");
     background-size: cover;
 
@@ -54,4 +78,4 @@
    padding: 4px;
    border-radius: 4px;
    font-size: 12px;
-}
+} */
