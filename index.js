@@ -42,7 +42,7 @@ searchTab.addEventListener("click", () => {
 
 // use for checking coordinates are available or not 
 function createSessionStorage() {
-    const localCoordinates = essionStorage.getItem("user-coordinates");
+    const localCoordinates = sessionStorage.getItem("user-coordinates");
     if (!localCoordinates) {
         // agar localCoordinates nhi mile to 
         allowLocation.classList.add("display")
@@ -54,7 +54,9 @@ function createSessionStorage() {
 }
 
 async function fetchWeatherInfo(coordinates) {
-    const { lat, lon } = coordinates;
+    const lat = coordinates;
+    const lon = coordinates;
+
     // allowLocation ko hide kar denge coordinates milane par 
     allowLocation.classList.remove("display");
     loading.classList.add("display");
@@ -90,7 +92,7 @@ function renderData(weatherdata) {
     //    fetch data from api 
     cityName.innerText = weatherdata?.name;
     countryIcon.src = `https://flagcdn.com/144x108/${weatherdata?.sys?.country.toLowerCase()}.png`;
-    description.innerText = weatherdata?.weather?.description;
+    description.innerText = weatherdata?.weather[0]?.description;
     weatherIcon.src = `http://openweathermap.org/img/w/${weatherdata?.weather?.[0]?.icon}.png`;
     weatherTemp.innerText = `${weatherdata?.main?.temp} °C`;
     windSpeed.innerText = `${weatherdata?.wind?.speed} m/s`;
@@ -135,8 +137,6 @@ async function searchWeatherInfo(city) {
     loading.classList.add("display");
     weatherCard.classList.remove("display");
     allowLocation.classList.remove("display");
-
-
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
         const data = await response.json();
@@ -147,7 +147,7 @@ async function searchWeatherInfo(city) {
 
     }
     catch (err) {
-
+alert("---ENTER A CURRECT CITY NAME--- ")
     }
 }
 
